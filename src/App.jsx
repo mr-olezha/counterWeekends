@@ -14,7 +14,7 @@ export default function App() {
   const [rainHearts, setRainHearts] = useState([]);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
-  const year = today.getFullYear();
+  const [year, setYear] = useState(today.getFullYear());
   const baseDate = new Date(2026, 5, 1);
 
   const isSunday = (date) => date.getDay() === 0;
@@ -122,16 +122,32 @@ export default function App() {
   });
 
   // ⬅️➡️ ПЕРЕКЛЮЧЕНИЕ МЕСЯЦА
-  const prevMonth = () => {
-    setDirection(-1);
-    setAnimKey((k) => k + 1);
-    setMonth((m) => (m === 1 ? 12 : m - 1));
+const prevMonth = () => {
+  setDirection(-1);
+  setAnimKey((k) => k + 1);
+
+  setMonth((m) => {
+    if (m === 1) {
+      setYear((y) => y - 1);
+      return 12;
+    }
+
+      return m - 1;
+    });
   };
 
   const nextMonth = () => {
     setDirection(1);
     setAnimKey((k) => k + 1);
-    setMonth((m) => (m === 12 ? 1 : m + 1));
+
+    setMonth((m) => {
+      if (m === 12) {
+        setYear((y) => y + 1);
+        return 1;
+      }
+
+      return m + 1;
+    });
   };
 
   const offset = (() => {
@@ -208,7 +224,7 @@ export default function App() {
             {[
               "Январь","Февраль","Март","Апрель","Май","Июнь",
               "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"
-            ][month - 1]}
+            ][month - 1]} {year}
           </div>
 
           <button className="arrowBtn" onClick={nextMonth}>▶</button>
