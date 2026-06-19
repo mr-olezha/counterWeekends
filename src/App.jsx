@@ -227,6 +227,23 @@ export default function App() {
             </div>
           ))}
         </div>
+
+        <div className="legend">
+        <div className="legendItem">
+          <span className="legendColor work"></span>
+          <span>Рабочий день</span>
+        </div>
+
+        <div className="legendItem">
+          <span className="legendColor off"></span>
+          <span>Выходной</span>
+        </div>
+
+        <div className="legendItem">
+          <span className="legendColor sunday"></span>
+          <span>Воскресенье</span>
+        </div>
+      </div>
       </div>
     </div>
   );
