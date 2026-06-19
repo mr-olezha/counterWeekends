@@ -1,0 +1,45 @@
+:root {
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: #0077B6;
+}
+
+.floatingHeart {
+  position: fixed;
+  color: #ff4d6d;
+  animation: up 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes up {
+  to {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+
+.rainHeart {
+  position: fixed;
+  top: -20px;
+  color: #ff4d6d;
+  animation: fall 4s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
