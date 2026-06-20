@@ -211,7 +211,7 @@ const prevMonth = () => {
         className="card"
         style={{ transform: `translate(${mouse.x}px, ${mouse.y}px)` }}
       >
-        <h1>ShiftFlow</h1>
+        <h1>TimeFlow</h1>
 
         {/* 🔥 МЕСЯЦ + СТРЕЛКИ */}
         <div className="monthRow">
