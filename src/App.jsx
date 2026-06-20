@@ -222,8 +222,8 @@ const prevMonth = () => {
             className={`monthText slide-${direction}`}
           >
             {[
-              "Январь","Февраль","Март","Апрель","Май","Июнь",
-              "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"
+              "Січень","Лютий","Березень","Квітень","Травень","Червень",
+              "Липень","Серпень","Вересень","Жовтень","Листопад","Грудень"
             ][month - 1]} {year}
           </div>
 
@@ -247,17 +247,17 @@ const prevMonth = () => {
         <div className="legend">
         <div className="legendItem">
           <span className="legendColor work"></span>
-          <span>Рабочий день</span>
+          <span>Робочий день</span>
         </div>
 
         <div className="legendItem">
           <span className="legendColor off"></span>
-          <span>Выходной</span>
+          <span>Вихідний</span>
         </div>
 
         <div className="legendItem">
           <span className="legendColor sunday"></span>
-          <span>Воскресенье</span>
+          <span>Неділя</span>
         </div>
       </div>
       </div>
